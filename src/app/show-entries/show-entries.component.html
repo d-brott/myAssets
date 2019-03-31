@@ -1,0 +1,27 @@
+<h4>Risk-Free Assets</h4>
+
+<table class="table table-borderless top20">
+  <tr *ngFor="let entry of riskFreeEntries | keyvalue">
+    <td width="30%">{{ entry.value.asset }}</td>
+    <td width="70%">{{ entry.value.amount }} €</td>
+  </tr>
+  <tr *ngIf="riskFreeEntries.size != 0">
+    <td>SUM</td>
+    <td>{{ sumRiskFree  }} €</td>
+  </tr>
+</table>
+
+<h4>Risky Assets</h4>
+
+<table class="table table-borderless top20">
+  <tr *ngFor="let entry of riskyEntries | keyvalue">
+    <td width="30%">{{ entry.value.asset }}</td>
+    <td width="70%">{{ entry.value.amount }} €</td>
+  </tr>
+  <tr *ngIf="riskyEntries.size != 0">
+    <td>SUM</td>
+    <td>{{ sumRisky }} €</td>
+  </tr>
+</table>
+
+<button class="btn btn-primary" type="button" (click)="clearDatabase()">Delete</button>
