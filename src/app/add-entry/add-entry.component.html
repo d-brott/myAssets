@@ -1,16 +1,18 @@
 <form>
     <div class="form-group">
-        <select class="form-control" name="category" [(ngModel)]="category">
-            <option value="risk free" selected>risk-free</option>
+        <label for="selectCategory">Category</label>
+        <select class="form-control" name="category" id="selectCategory" placeholder="risk-free" [(ngModel)]="category">
+            <option value="risk-free" selected>risk-free</option>
             <option value="risky">risky</option>
         </select>
     </div>
     <div class="form-group">
-        <input type="text" [(ngModel)]="asset" class="form-control" placeholder="Asset" name="asset">
-        <small class="form-text text-muted">e.g. Cash, Checking account, Savings account, Shares, ...</small>
+        <label for="inputAsset">Asset</label>
+        <input type="text" [(ngModel)]="asset" class="form-control" id="inputAsset" placeholder="Cash, Checking Account, Shares, ..." name="asset">
     </div>
     <div class="form-group">
-        <input type="number" [(ngModel)]="amount" class="form-control" placeholder="Amount in Euro" name="asset">
+        <label for="inputAmount">Amount</label>
+        <input type="number" [(ngModel)]="amount" class="form-control" placeholder="100.00" name="asset">
     </div>
     <div class="btn-toolbar">
         <button type="submit" class="btn btn-primary" (click)="addAsset()">Add</button>

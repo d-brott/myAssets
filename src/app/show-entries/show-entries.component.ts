@@ -23,6 +23,7 @@ export class ShowEntriesComponent implements OnInit {
   public getAllAssets() {
     this.databaseService.get(map => {
       map.forEach((value: IAsset, key: number) => {
+        console.log(value.category);
         if (value.category == "risk-free") {
           this.riskFreeEntries.set(value.id, value);
           this.sumRiskFree += value.amount;

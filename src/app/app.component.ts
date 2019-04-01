@@ -7,10 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'myAssets';
-
+  routeHome =  {linkName: 'Home', url: 'home'};
+  routeAddEntry = {linkName: 'AddEntry', url: 'add-entry'};
+  routeShowEntries = {linkName: 'ShowEntries', url: 'show-entries'};
+/*
   routes = [
     {linkName: 'Home', url: 'home'},
     {linkName: 'AddEntry', url: 'add-entry'},
     {linkName: 'ShowEntries', url: 'show-entries'}
   ]
+  */
 }

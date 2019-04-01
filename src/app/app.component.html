@@ -1,20 +1,27 @@
 <div class="container">
     <div class="row top10">
-        <div class="col-3"></div>
-        <div class="col-6">
-            <ul class="nav nav-tabs">
-                <li class="nav-item" *ngFor="let route of routes">
-                    <a class="nav-link" [routerLink]="route.url">{{route.linkName}}</a>
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" [routerLink]="routeHome.url"><i class="fas fa-home fa-lg"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="routeAddEntry.url"><i class="fas fa-pen fa-lg"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="routeShowEntries.url"><i class="fas fa-list fa-lg"></i></a>
                 </li>
             </ul>
+    
         </div>
-        <div class="col-3"></div>
+        <div class="col-md-3"></div>
     </div>
     <div class="row top10">
-        <div class="col-3"></div>
-        <div class="col-6">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 main-border">
             <router-outlet></router-outlet>
         </div>
-        <div class="col-3"></div>
+        <div class="col-md-3"></div>
     </div>
 </div>
